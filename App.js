@@ -9,6 +9,12 @@ export default function App() {
 
   const [enteredGoal, setEnteredGoal] = useState('');
   const [courseGoal, setCourseGoal] = useState ([]); 
+  
+  const removeGoalHandler = goalId => {
+    setCourseGoal(currentGoal => {
+      return
+    });
+  }
 
   function goalInputHandler(enteredText) {
     setEnteredGoal(enteredText)
