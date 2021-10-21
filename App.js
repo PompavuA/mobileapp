@@ -33,13 +33,11 @@ export default function App() {
       onPress = {addGoalHandler}
       />
     </View>
-    <View>
-      {courseGoal.map((goal) => (
-        <View key={goal} style={styles.report}>
-          <Text> {goal}</Text>
-        </View>
-      ))}
-
+    <FlatList
+    keyExtractor= {(item,index) => item.id}
+    data={courseGoal}
+    renderItem={itemData => (
+      <GoalItem title={itemData.item.value} />
 
 
     )}/>
